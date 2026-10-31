@@ -1,40 +1,39 @@
-# Lubens Farnesio · edificio 3D interactivo
+# Finca Mirapinos · Urbanización 3D Interactiva
 
-Web de la promoción **Farnesio** (80 viviendas, Valladolid): edificio 3D con disponibilidad, ficha de cada vivienda con plano comercial e interactivo, simulación de sol, comparador, asistente de búsqueda y cuota de hipoteca orientativa.
+Web interactiva de la promoción **Finca Mirapinos** (35 chalets unifamiliares con parcelas individuales en Simancas, Valladolid): urbanización 3D interactiva con disponibilidad en tiempo real, ficha individual de cada chalet, orientación solar, desglose de calidades y cuota orientativa de hipoteca.
 
-Publicada en **https://lubens-farnesio.netlify.app**
+## 🚀 Contenido
 
-## Contenido
-
-| Archivo | Qué es |
+| Archivo / Carpeta | Qué es |
 |---|---|
-| `index.html` | La aplicación completa (HTML + CSS + JavaScript, usa three.js desde CDN) |
-| `data.json` | Geometría del edificio extraída del DXF de proyecto + datos públicos de las viviendas (estado, precio, superficies) |
-| `plano-*.png` | Planos comerciales, uno por tipología (`1A-C`, `1B-AtD`…) |
-| `r1.jpg` … `r5.jpg` | Renders del proyecto (galería) |
-| `logo-lubens-farnesio.png` | Logo |
-| `netlify.toml` | Configuración de Netlify (sitio estático, sin build) |
-| `tools/` | Scripts Python usados para extraer la geometría del DXF y los planos (referencia; necesitan los archivos originales) |
+| `index.html` | La aplicación completa (HTML5 + CSS3 + JavaScript / Three.js desde CDN) |
+| `data.json` | Trazado urbanístico, geometrías y datos de las 35 parcelas (estado, superficie de parcela, metros construidos, dormitorios, precios) |
+| `tools/` | Scripts en Python para procesar el plano DXF de arquitectura y regenerar los datos urbanísticos |
+| `netlify.toml` | Configuración para despliegue automático en Netlify |
 
-`data.json` **no contiene datos personales**: ni compradores, ni teléfonos, ni comisiones. Solo estado, precio y superficies.
+## 📐 Cambiar la disponibilidad o los precios
 
-## Cambiar la disponibilidad o los precios
-
-Los estados y precios están en `data.json`, dentro de `units` (un objeto por vivienda):
+Los estados y precios se actualizan en `data.json` dentro de la lista `units`:
 
 ```json
-{"id":"1B-4D", "estado":"LIBRE", "precio":280000, ...}
+{
+  "id": "P-01",
+  "numero": 1,
+  "nombre": "Chalet Parcela 1",
+  "tipologia": "Olivo 1",
+  "estado": "LIBRE",
+  "precio": 338500,
+  "sup_parcela": 501.96
+}
 ```
 
-`estado` admite `LIBRE`, `RESERVADA`, `VENDIDA` o `BLOQUEADA`. Tras editar, sube el cambio a GitHub y vuelve a desplegar en Netlify.
+El campo `estado` admite `LIBRE`, `RESERVADA` o `VENDIDA`.
 
-## Probar en local
+## 💻 Probar en local
 
-Cualquier servidor estático sirve, por ejemplo:
+Cualquier servidor estático sirve:
 
 ```bash
-python3 -m http.server 8000
-# y abrir http://localhost:8000
+python -m http.server 8080
+# y abrir en el navegador http://localhost:8080
 ```
-
-(Abrir `index.html` con doble clic no funciona porque el navegador bloquea la carga de `data.json` desde disco.)

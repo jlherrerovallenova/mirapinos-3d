@@ -1,3 +1,8 @@
 .netlify
 .DS_Store
 __pycache__/
+*.dxf
+*.dwg
+*.rar
+*.zip
+index_farnesio_backup.html
