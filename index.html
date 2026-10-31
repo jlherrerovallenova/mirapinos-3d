@@ -3,24 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="description" content="Finca Mirapinos, Simancas (Valladolid): 35 chalets unifamiliares con parcelas individuales, piscina comunitaria, pista multideportiva y zonas ajardinadas junto al pinar.">
+<meta name="description" content="Finca Mirapinos, Simancas: 35 chalets de diseño contemporáneo, ladrillo blanco esmaltado, aplacados antracita, garaje integrado, piscina comunitaria y aerotermia.">
 <style>*,*::before,*::after{box-sizing:border-box}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
-<title>Finca Mirapinos · Urbanización 3D Interactiva</title>
+<title>Finca Mirapinos · Promoción Exclusiva de Chalets</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
 :root{
-  --paper:#F4F5F1; --sheet:#FFFFFF; --ink:#161E1A; --ink-2:#46524C; --ink-3:#77857E; --rule:#D4DDD6;
-  --pine:#1B4931; --pine-dark:#113020; --pine-soft:#DCEFE5; --oak:#B07D48; --oak-soft:#EFE0D0;
-  --free:#279655; --free-soft:#D5F2E1; --reserved:#E5A93C; --reserved-soft:#FDF2DD; --taken:#889498; --taken-soft:#E5E8E9;
+  --paper:#EEF0EB; --sheet:#FFFFFF; --ink:#141C18; --ink-2:#404E47; --ink-3:#6F8077; --rule:#D2DDD6;
+  --pine:#18442D; --pine-dark:#0D2619; --pine-soft:#D5ECDF; --charcoal:#282C2E; --brick-white:#F4F3EE;
+  --free:#239854; --free-soft:#D3F5DF; --reserved:#E29E30; --reserved-soft:#FDF1DA; --taken:#7A878B; --taken-soft:#E4E8E9;
   --display:"Archivo","Arial Narrow",sans-serif; --body:"Instrument Sans",sans-serif; --mono:"IBM Plex Mono",monospace;
-  --panel-w:450px;
+  --panel-w:460px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --paper:#101614; --sheet:#161F1B; --ink:#EAF2EC; --ink-2:#A0B2A8; --ink-3:#687B71; --rule:#25332B;
-    --pine:#2C7B53; --pine-dark:#19442F; --pine-soft:#173625; --free:#42C27A; --free-soft:#153723; --reserved:#F2B248; --reserved-soft:#3A2A0F; --taken:#687570;
+    --paper:#0E1411; --sheet:#151E19; --ink:#EAF2EC; --ink-2:#9FB2A7; --ink-3:#64796E; --rule:#223028;
+    --pine:#2E855A; --pine-dark:#17422C; --pine-soft:#163825; --charcoal:#1E2224; --brick-white:#DCDAD3;
+    --free:#3ED17F; --free-soft:#143A23; --reserved:#F2B248; --reserved-soft:#3D2A0E; --taken:#687570;
     color-scheme:dark;
   }
 }
@@ -30,18 +31,18 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 @media (max-width:960px){.app{grid-template-columns:1fr;grid-template-rows:52vh 48vh}}
 
 /* Escenario 3D */
-.stage{position:relative;min-width:0;overflow:hidden;background:linear-gradient(180deg,#6699D4 0%,#C8DFEE 50%,#DCEFE0 100%)}
+.stage{position:relative;min-width:0;overflow:hidden;background:linear-gradient(180deg,#5E96D4 0%,#B8D7EF 45%,#D6EBE0 100%)}
 #gl{position:absolute;inset:0;width:100%;height:100%;display:block;touch-action:none}
-.brand{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));left:max(18px,env(safe-area-inset-left,0px));color:#fff;text-shadow:0 2px 14px rgba(10,30,20,.65);pointer-events:none}
+.brand{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));left:max(18px,env(safe-area-inset-left,0px));color:#fff;text-shadow:0 2px 14px rgba(10,30,20,.7);pointer-events:none}
 .brand h1{margin:0;font-family:var(--display);font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:.02em;line-height:1}
 .brand p{margin:6px 0 0;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;opacity:.95}
 
-/* Marcadores superiores */
+/* Marcadores */
 .tally{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:18px;display:flex;align-items:center;gap:12px;background:rgba(18,29,24,.88);backdrop-filter:blur(10px);color:#fff;border-radius:999px;padding:6px 14px 6px 10px;font-size:12px;border:1px solid rgba(255,255,255,.18);box-shadow:0 4px 20px rgba(0,0,0,.25)}
 .tally b{font-family:var(--display);font-size:18px;font-weight:700}
-.tally .dot{width:10px;height:10px;border-radius:50%;background:#3AE07F;box-shadow:0 0 0 3px rgba(58,224,127,.3)}
+.tally .dot{width:10px;height:10px;border-radius:50%;background:#38DF7B;box-shadow:0 0 0 3px rgba(56,223,123,.3)}
 
-/* Controles flotantes */
+/* Herramientas de navegación */
 .controls-overlay{position:absolute;right:18px;top:calc(66px + env(safe-area-inset-top,0px));display:flex;flex-direction:column;gap:8px;align-items:flex-end}
 .btn-tool{background:rgba(18,29,24,.88);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.18);color:#fff;padding:8px 12px;border-radius:8px;font-size:12px;cursor:pointer;display:flex;align-items:center;gap:6px;transition:all .15s}
 .btn-tool:hover{background:rgba(28,45,37,.98);transform:translateY(-1px)}
@@ -58,12 +59,12 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 .tags{position:absolute;inset:0;pointer-events:none;overflow:hidden}
 .tag{position:absolute;left:0;top:0;pointer-events:auto;cursor:pointer;border:0;background:#1B4931;color:#fff;border-radius:6px;padding:3px 7px;font:600 11px/1.2 var(--body);white-space:nowrap;box-shadow:0 3px 12px rgba(0,0,0,.35);transform-origin:50% 100%;transition:transform .12s,background .12s}
 .tag::after{content:"";position:absolute;left:50%;bottom:-4px;margin-left:-4px;border:4px solid transparent;border-bottom:0;border-top-color:#1B4931}
-.tag:hover,.tag.sel{background:#B07D48;transform:scale(1.15)}
-.tag:hover::after,.tag.sel::after{border-top-color:#B07D48}
+.tag:hover,.tag.sel{background:#282C2E;transform:scale(1.15)}
+.tag:hover::after,.tag.sel::after{border-top-color:#282C2E}
 
 /* Panel lateral */
 .panel{background:var(--sheet);border-left:1px solid var(--rule);display:flex;flex-direction:column;height:100%;overflow-y:auto;overflow-x:hidden}
-.panel-head{padding:18px 20px;border-bottom:1px solid var(--rule);position:relative}
+.panel-head{padding:18px 20px;border-bottom:1px solid var(--rule)}
 .panel-head h2{margin:0 0 4px;font-family:var(--display);font-size:22px;font-weight:700}
 .panel-head .desc{color:var(--ink-2);font-size:12.5px;margin:0}
 
@@ -93,8 +94,8 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 .spec-label{font-size:10.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.05em}
 .spec-val{font-size:13.5px;font-weight:600;margin-top:2px}
 
-.model-info{background:rgba(176,125,72,.08);border:1px solid rgba(176,125,72,.3);border-radius:8px;padding:12px}
-.model-info h4{margin:0 0 6px;color:var(--oak);font-size:13px}
+.model-info{background:rgba(24,68,45,.06);border:1px solid rgba(24,68,45,.2);border-radius:8px;padding:12px}
+.model-info h4{margin:0 0 6px;color:var(--pine);font-size:13px}
 .model-info p{margin:0;font-size:12px;color:var(--ink-2);line-height:1.4}
 
 /* Plano en la ficha */
@@ -108,11 +109,18 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 
 .action-cta{display:flex;flex-direction:column;gap:8px;margin-top:6px}
 .btn-primary{background:var(--pine);color:#fff;border:0;padding:12px;border-radius:8px;font-weight:600;font-size:13.5px;cursor:pointer;text-align:center;text-decoration:none;transition:background .15s}
-.btn-primary:hover{background:#113020}
+.btn-primary:hover{background:var(--pine-dark)}
 .btn-secondary{background:transparent;color:var(--ink);border:1px solid var(--rule);padding:10px;border-radius:8px;font-weight:500;font-size:12.5px;cursor:pointer;text-align:center}
 .btn-secondary:hover{background:var(--paper)}
 
-/* Modal zoom plano */
+/* Galería de Renders en pestaña */
+.render-card{border:1px solid var(--rule);border-radius:8px;overflow:hidden;background:#fff;margin-bottom:14px}
+.render-card img{display:block;width:100%;height:auto;cursor:zoom-in}
+.render-card-body{padding:10px 12px;background:var(--sheet)}
+.render-card-body h4{margin:0 0 4px;font-size:13px}
+.render-card-body p{margin:0;font-size:11.5px;color:var(--ink-2)}
+
+/* Modal zoom */
 .modal{position:fixed;inset:0;background:rgba(0,0,0,.85);backdrop-filter:blur(6px);display:none;align-items:center;justify-content:center;z-index:9999;padding:20px}
 .modal.open{display:flex}
 .modal img{max-width:95vw;max-height:92vh;border-radius:6px;box-shadow:0 10px 40px rgba(0,0,0,.5)}
@@ -138,8 +146,9 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
 
     <div class="controls-overlay">
       <button class="btn-tool" id="btn-sun-toggle">☀️ Simulación Solar</button>
-      <button class="btn-tool" id="btn-camera-aerial">📸 Vista Aérea Render</button>
-      <button class="btn-tool" id="btn-reset-cam">🔄 Vista General</button>
+      <button class="btn-tool" id="btn-camera-street">🚗 Vista de Calle Real</button>
+      <button class="btn-tool" id="btn-camera-pool">🏊 Vista Piscina / Jardín</button>
+      <button class="btn-tool" id="btn-reset-cam">🔄 Vista General Aérea</button>
     </div>
 
     <div class="legend">
@@ -155,12 +164,12 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
   <aside class="panel">
     <div class="panel-head">
       <h2>Finca Mirapinos</h2>
-      <p class="desc">Promoción exclusiva de 35 chalets con piscina y zonas verdes junto al pinar.</p>
+      <p class="desc">Viviendas de autor con arquitectura de ladrillo blanco esmaltado y aplacados antracita.</p>
     </div>
 
     <div class="tabs">
       <button class="tab-btn active" id="tab-vivienda">Ficha Chalet</button>
-      <button class="tab-btn" id="tab-galeria">Renders y Planos</button>
+      <button class="tab-btn" id="tab-galeria">Renders Reales</button>
       <button class="tab-btn" id="tab-urbanizacion">Urbanización</button>
     </div>
 
@@ -172,15 +181,15 @@ body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:
     </div>
 
     <div id="panel-body">
-      <!-- Se llena dinámicamente -->
+      <!-- Contenido dinámico -->
     </div>
   </aside>
 </div>
 
-<!-- Modal para ver el plano ampliado -->
+<!-- Modal zoom -->
 <div class="modal" id="modal-zoom">
   <button class="modal-close" onclick="closeModal()">✕</button>
-  <img id="modal-img" src="" alt="Plano ampliado">
+  <img id="modal-img" src="" alt="Imagen ampliada">
 </div>
 
 <script>
@@ -190,6 +199,70 @@ let unitMeshes = [];
 let selectedUnit = null;
 let sunLight;
 let currentTab = 'vivienda';
+let textures = {};
+
+// Generador de texturas de alta calidad procedimental (estilo Farnesio)
+function createProceduralTextures() {
+  // 1. Textura de ladrillo caravista blanco esmaltado con llagas
+  const canvasBrick = document.createElement('canvas');
+  canvasBrick.width = 512; canvasBrick.height = 512;
+  const ctxB = canvasBrick.getContext('2d');
+  ctxB.fillStyle = '#F4F3EE'; ctxB.fillRect(0,0,512,512);
+  ctxB.strokeStyle = '#D7D5CC'; ctxB.lineWidth = 2.5;
+  const rh = 16, rw = 48;
+  for (let y = 0; y < 512; y += rh) {
+    ctxB.beginPath(); ctxB.moveTo(0, y); ctxB.lineTo(512, y); ctxB.stroke();
+    const offset = ((y / rh) % 2) * (rw / 2);
+    for (let x = offset; x < 512; x += rw) {
+      ctxB.beginPath(); ctxB.moveTo(x, y); ctxB.lineTo(x, y + rh); ctxB.stroke();
+    }
+  }
+  const texBrick = new THREE.CanvasTexture(canvasBrick);
+  texBrick.wrapS = texBrick.wrapT = THREE.RepeatWrapping;
+  texBrick.repeat.set(4, 4);
+
+  // 2. Textura de aplacado porcelánico antracita de gran formato
+  const canvasSlate = document.createElement('canvas');
+  canvasSlate.width = 256; canvasSlate.height = 256;
+  const ctxS = canvasSlate.getContext('2d');
+  ctxS.fillStyle = '#2C3033'; ctxS.fillRect(0,0,256,256);
+  ctxS.strokeStyle = '#1D2123'; ctxS.lineWidth = 3;
+  ctxS.strokeRect(0, 0, 256, 128);
+  ctxS.strokeRect(0, 128, 256, 128);
+  const texSlate = new THREE.CanvasTexture(canvasSlate);
+  texSlate.wrapS = texSlate.wrapT = THREE.RepeatWrapping;
+  texSlate.repeat.set(2, 2);
+
+  // 3. Césped natural con matices
+  const canvasGrass = document.createElement('canvas');
+  canvasGrass.width = 256; canvasGrass.height = 256;
+  const ctxG = canvasGrass.getContext('2d');
+  ctxG.fillStyle = '#4D7A37'; ctxG.fillRect(0,0,256,256);
+  for(let i=0; i<3000; i++){
+    ctxG.fillStyle = Math.random() > 0.5 ? '#578A3E' : '#456E30';
+    ctxG.fillRect(Math.random()*256, Math.random()*256, 2, 2);
+  }
+  const texGrass = new THREE.CanvasTexture(canvasGrass);
+  texGrass.wrapS = texGrass.wrapT = THREE.RepeatWrapping;
+  texGrass.repeat.set(16, 16);
+
+  // 4. Adoquín de acera
+  const canvasPave = document.createElement('canvas');
+  canvasPave.width = 256; canvasPave.height = 256;
+  const ctxP = canvasPave.getContext('2d');
+  ctxP.fillStyle = '#C7CCC8'; ctxP.fillRect(0,0,256,256);
+  ctxP.strokeStyle = '#9AA09B'; ctxP.lineWidth = 2;
+  for(let x=0; x<256; x+=32){
+    for(let y=0; y<256; y+=32){
+      ctxP.strokeRect(x, y, 32, 32);
+    }
+  }
+  const texPave = new THREE.CanvasTexture(canvasPave);
+  texPave.wrapS = texPave.wrapT = THREE.RepeatWrapping;
+  texPave.repeat.set(8, 8);
+
+  return { texBrick, texSlate, texGrass, texPave };
+}
 
 async function init() {
   const res = await fetch('data.json');
@@ -197,6 +270,7 @@ async function init() {
 
   document.getElementById('free-count').textContent = D.units.filter(u => u.estado === 'LIBRE').length;
 
+  textures = createProceduralTextures();
   setupThree();
   buildDetailedEnvironment();
   buildChaletMeshes();
@@ -212,10 +286,9 @@ function setupThree() {
 
   scene = new THREE.Scene();
   scene.background = new THREE.Color(0xbdd6ea);
-  scene.fog = new THREE.FogExp2(0xbdd6ea, 0.0028);
+  scene.fog = new THREE.FogExp2(0xbdd6ea, 0.0025);
 
-  camera = new THREE.PerspectiveCamera(40, stage.clientWidth / stage.clientHeight, 1, 1200);
-  // Posición inicial coincidente con la perspectiva del render comercial
+  camera = new THREE.PerspectiveCamera(38, stage.clientWidth / stage.clientHeight, 1, 1400);
   camera.position.set(20, 130, 170);
 
   renderer = new THREE.WebGLRenderer({ canvas, antialias: true, powerPreference: 'high-performance' });
@@ -227,21 +300,19 @@ function setupThree() {
   controls = new THREE.OrbitControls(camera, canvas);
   controls.enableDamping = true;
   controls.dampingFactor = 0.06;
-  controls.maxPolarAngle = Math.PI * 0.46;
-  controls.minDistance = 15;
-  controls.maxDistance = 350;
+  controls.maxPolarAngle = Math.PI * 0.47;
+  controls.minDistance = 12;
+  controls.maxDistance = 380;
   controls.target.set(5, 0, 5);
 
-  // Luz ambiental y cielo
-  const hemi = new THREE.HemisphereLight(0xffffff, 0x4d634d, 0.7);
+  const hemi = new THREE.HemisphereLight(0xffffff, 0x556855, 0.7);
   scene.add(hemi);
 
-  const amb = new THREE.AmbientLight(0xffffff, 0.28);
+  const amb = new THREE.AmbientLight(0xffffff, 0.3);
   scene.add(amb);
 
-  // Sol con sombras suaves y gran alcance
-  sunLight = new THREE.DirectionalLight(0xfff7e8, 1.9);
-  sunLight.position.set(70, 130, 90);
+  sunLight = new THREE.DirectionalLight(0xfffaec, 2.0);
+  sunLight.position.set(80, 140, 95);
   sunLight.castShadow = true;
   sunLight.shadow.mapSize.set(2048, 2048);
   sunLight.shadow.camera.left = -140;
@@ -249,22 +320,22 @@ function setupThree() {
   sunLight.shadow.camera.top = 140;
   sunLight.shadow.camera.bottom = -140;
   sunLight.shadow.camera.near = 10;
-  sunLight.shadow.camera.far = 380;
+  sunLight.shadow.camera.far = 400;
   sunLight.shadow.bias = -0.0004;
   sunLight.shadow.normalBias = 0.04;
   scene.add(sunLight);
 }
 
 function buildDetailedEnvironment() {
-  // 1. Campo natural circundante
-  const groundGeo = new THREE.PlaneGeometry(800, 800);
-  const groundMat = new THREE.MeshStandardMaterial({ color: 0x829b68, roughness: 0.95 });
+  // 1. Campo natural base
+  const groundGeo = new THREE.PlaneGeometry(850, 850);
+  const groundMat = new THREE.MeshStandardMaterial({ map: textures.texGrass, roughness: 0.95 });
   const ground = new THREE.Mesh(groundGeo, groundMat);
   ground.rotation.x = -Math.PI / 2;
   ground.receiveShadow = true;
   scene.add(ground);
 
-  // 2. Trazado de viales y aceras desde el DXF
+  // 2. Líneas del DXF
   if (D.urbanizacion_lines) {
     const lineMatCalzada = new THREE.LineBasicMaterial({ color: 0x3d4447, linewidth: 2 });
     const lineMatBordillo = new THREE.LineBasicMaterial({ color: 0xe6e3dc });
@@ -282,78 +353,84 @@ function buildDetailedEnvironment() {
     });
   }
 
-  // 3. Suelo de asfalto general para las calles interiores
-  const roadFloorGeo = new THREE.PlaneGeometry(160, 160);
-  const roadMat = new THREE.MeshStandardMaterial({ color: 0x484d50, roughness: 0.9 });
+  // 3. Asfalto de las calzadas interiores
+  const roadFloorGeo = new THREE.PlaneGeometry(165, 165);
+  const roadMat = new THREE.MeshStandardMaterial({ color: 0x383C3F, roughness: 0.9 });
   const roadFloor = new THREE.Mesh(roadFloorGeo, roadMat);
   roadFloor.rotation.x = -Math.PI / 2;
   roadFloor.position.set(0, 0.02, 0);
   roadFloor.receiveShadow = true;
   scene.add(roadFloor);
 
-  // 4. Gran pradera verde central (jardín comunitario)
+  // 4. Gran pradera comunitaria central
   const lawnGeo = new THREE.BoxGeometry(68, 0.1, 48);
-  const lawnMat = new THREE.MeshStandardMaterial({ color: 0x5a8840, roughness: 0.9 });
+  const lawnMat = new THREE.MeshStandardMaterial({ color: 0x477833, roughness: 0.9 });
   const lawn = new THREE.Mesh(lawnGeo, lawnMat);
   lawn.position.set(8, 0.05, -5);
   lawn.rotation.y = THREE.MathUtils.degToRad(20);
   lawn.receiveShadow = true;
   scene.add(lawn);
 
-  // 5. Piscina comunitaria central
+  // 5. Piscina Comunitaria con vallado negro y solarium
   const poolGroup = new THREE.Group();
   poolGroup.position.set(12, 0, -5);
   poolGroup.rotation.y = THREE.MathUtils.degToRad(20);
 
-  // Solarium de madera / piedra alrededor
-  const solariumGeo = new THREE.BoxGeometry(26, 0.2, 14);
-  const solariumMat = new THREE.MeshStandardMaterial({ color: 0xd8cbba, roughness: 0.7 });
+  const solariumGeo = new THREE.BoxGeometry(26, 0.22, 14);
+  const solariumMat = new THREE.MeshStandardMaterial({ color: 0xE2DFD8, roughness: 0.65 });
   const solarium = new THREE.Mesh(solariumGeo, solariumMat);
-  solarium.position.y = 0.1;
+  solarium.position.y = 0.11;
   solarium.receiveShadow = true;
   poolGroup.add(solarium);
 
-  // Lámina de agua cristalina
-  const waterGeo = new THREE.BoxGeometry(18, 0.22, 8);
+  const waterGeo = new THREE.BoxGeometry(19, 0.24, 8.5);
   const waterMat = new THREE.MeshStandardMaterial({
-    color: 0x2299cc, roughness: 0.1, metalness: 0.15,
-    emissive: 0x064d6e, emissiveIntensity: 0.4
+    color: 0x2AB2D8, roughness: 0.08, metalness: 0.2,
+    emissive: 0x07557A, emissiveIntensity: 0.45
   });
   const water = new THREE.Mesh(waterGeo, waterMat);
-  water.position.y = 0.12;
+  water.position.y = 0.13;
   poolGroup.add(water);
+
+  // Vallado negro perimetral de seguridad para la piscina
+  const fenceMat = new THREE.MeshStandardMaterial({ color: 0x1A1C1D, roughness: 0.5 });
+  const f1 = new THREE.Mesh(new THREE.BoxGeometry(26.2, 0.9, 0.15), fenceMat);
+  f1.position.set(0, 0.55, 7.1); f1.castShadow = true; poolGroup.add(f1);
+  const f2 = new THREE.Mesh(new THREE.BoxGeometry(26.2, 0.9, 0.15), fenceMat);
+  f2.position.set(0, 0.55, -7.1); f2.castShadow = true; poolGroup.add(f2);
+  const f3 = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.9, 14.2), fenceMat);
+  f3.position.set(13.1, 0.55, 0); f3.castShadow = true; poolGroup.add(f3);
+  const f4 = new THREE.Mesh(new THREE.BoxGeometry(0.15, 0.9, 14.2), fenceMat);
+  f4.position.set(-13.1, 0.55, 0); f4.castShadow = true; poolGroup.add(f4);
 
   scene.add(poolGroup);
 
-  // 6. Pista multideportiva (en la zona de juegos superior)
+  // 6. Pista multideportiva
   const courtGeo = new THREE.BoxGeometry(22, 0.15, 12);
-  const courtMat = new THREE.MeshStandardMaterial({ color: 0x3d74a8, roughness: 0.6 });
+  const courtMat = new THREE.MeshStandardMaterial({ color: 0x3A6F9E, roughness: 0.6 });
   const court = new THREE.Mesh(courtGeo, courtMat);
   court.position.set(48, 0.1, -25);
   court.rotation.y = THREE.MathUtils.degToRad(35);
   court.receiveShadow = true;
   scene.add(court);
 
-  // 7. Vegetación y Arbolado perimetral (Pinar de Simancas)
+  // 7. Bosque perimetral de pinos (Pinar de Simancas)
   createPineTrees();
 }
 
 function createPineTrees() {
-  const treeGeo = new THREE.ConeGeometry(3.5, 9, 6);
-  const trunkGeo = new THREE.CylinderGeometry(0.5, 0.6, 3, 5);
-  const leafMat = new THREE.MeshStandardMaterial({ color: 0x204528, roughness: 0.9 });
-  const trunkMat = new THREE.MeshStandardMaterial({ color: 0x543d2b, roughness: 0.9 });
+  const treeGeo = new THREE.ConeGeometry(3.6, 9.5, 6);
+  const trunkGeo = new THREE.CylinderGeometry(0.5, 0.65, 3, 5);
+  const leafMat = new THREE.MeshStandardMaterial({ color: 0x1E4226, roughness: 0.9 });
+  const trunkMat = new THREE.MeshStandardMaterial({ color: 0x4D3624, roughness: 0.9 });
 
   const treeGroup = new THREE.Group();
-
-  // Bosque perimetral exterior
-  for (let i = 0; i < 90; i++) {
-    const angle = (i / 90) * Math.PI * 2;
-    const dist = 110 + Math.random() * 45;
+  for (let i = 0; i < 95; i++) {
+    const angle = (i / 95) * Math.PI * 2;
+    const dist = 112 + Math.random() * 45;
     const x = Math.cos(angle) * dist;
     const z = Math.sin(angle) * dist;
 
-    // Solo plantar si está fuera del sector urbanizado
     if (z < 65 || Math.abs(x) > 75) {
       const tree = new THREE.Group();
       tree.position.set(x, 0, z);
@@ -364,7 +441,7 @@ function createPineTrees() {
       tree.add(trunk);
 
       const foliage = new THREE.Mesh(treeGeo, leafMat);
-      foliage.position.y = 6.5;
+      foliage.position.y = 6.8;
       foliage.castShadow = true;
       tree.add(foliage);
 
@@ -373,21 +450,23 @@ function createPineTrees() {
       treeGroup.add(tree);
     }
   }
-
   scene.add(treeGroup);
 }
 
+// CONSTRUCCIÓN ARQUITECTÓNICA DE LOS CHALETS SEGÚN LOS RENDERS OFICIALES
 function buildChaletMeshes() {
-  // Materiales de acabado fieles a los renders
-  const matLibre = new THREE.MeshStandardMaterial({ color: 0x279655, roughness: 0.4, emissive: 0x0c3b1e, emissiveIntensity: 0.25 });
-  const matRes = new THREE.MeshStandardMaterial({ color: 0xE5A93C, roughness: 0.5, emissive: 0x5a3b05, emissiveIntensity: 0.25 });
-  const matVendida = new THREE.MeshStandardMaterial({ color: 0x7c878b, roughness: 0.8 });
+  const matLibre = new THREE.MeshStandardMaterial({ color: 0x239854, roughness: 0.4, emissive: 0x0a351b, emissiveIntensity: 0.25 });
+  const matRes = new THREE.MeshStandardMaterial({ color: 0xE29E30, roughness: 0.5, emissive: 0x5a3b05, emissiveIntensity: 0.25 });
+  const matVendida = new THREE.MeshStandardMaterial({ color: 0x727d82, roughness: 0.8 });
 
-  const matFachada = new THREE.MeshStandardMaterial({ color: 0xF5F2EB, roughness: 0.55 });
-  const matMadera = new THREE.MeshStandardMaterial({ color: 0xAC7740, roughness: 0.65 });
-  const matVidrio = new THREE.MeshStandardMaterial({ color: 0x1d2730, roughness: 0.1, metalness: 0.7 });
-  const matCubierta = new THREE.MeshStandardMaterial({ color: 0xC5B49C, roughness: 0.85 }); // Teja/arena beige
-  const matSolar = new THREE.MeshStandardMaterial({ color: 0x1A253A, roughness: 0.2, metalness: 0.8 }); // Paneles fotovoltaicos
+  // Materiales de alta fidelidad arquitectónica
+  const matLadrillo = new THREE.MeshStandardMaterial({ map: textures.texBrick, roughness: 0.65 });
+  const matAntracita = new THREE.MeshStandardMaterial({ map: textures.texSlate, roughness: 0.6 });
+  const matVidrioOscuro = new THREE.MeshStandardMaterial({ color: 0x1A2228, roughness: 0.1, metalness: 0.65 });
+  const matBarandillaVidrio = new THREE.MeshStandardMaterial({ color: 0x98C0D4, transparent: true, opacity: 0.35, roughness: 0.05, metalness: 0.2 });
+  const matCelosiaNegra = new THREE.MeshStandardMaterial({ color: 0x1C2022, roughness: 0.5 });
+  const matSolar = new THREE.MeshStandardMaterial({ color: 0x131D2D, roughness: 0.15, metalness: 0.85 }); // Paneles solares
+  const matCoche = new THREE.MeshStandardMaterial({ color: 0x2055A8, roughness: 0.2, metalness: 0.8 }); // Coche azul render
 
   D.units.forEach(unit => {
     const group = new THREE.Group();
@@ -395,8 +474,11 @@ function buildChaletMeshes() {
     group.rotation.y = THREE.MathUtils.degToRad(unit.rot);
     group.userData = unit;
 
-    // 1. Parcela / Jardín privado delimitado
-    const pGeo = new THREE.BoxGeometry(unit.ancho + 4, 0.2, unit.fondo + 4);
+    const W = unit.ancho;   // ~10.5 a 12.0
+    const D_depth = unit.fondo; // ~10.0 a 11.0
+
+    // 1. Parcela / Suelo con césped y adoquín de acceso
+    const pGeo = new THREE.BoxGeometry(W + 3.5, 0.2, D_depth + 3.5);
     let pMat = matLibre;
     if (unit.estado === 'RESERVADA') pMat = matRes;
     if (unit.estado === 'VENDIDA') pMat = matVendida;
@@ -405,50 +487,93 @@ function buildChaletMeshes() {
     pMesh.receiveShadow = true;
     group.add(pMesh);
 
-    // 2. Planta Baja del Chalet
-    const pbGeo = new THREE.BoxGeometry(unit.ancho, 3.2, unit.fondo);
-    const pbMesh = new THREE.Mesh(pbGeo, matFachada);
-    pbMesh.position.y = 1.6 + 0.2;
-    pbMesh.castShadow = true;
-    pbMesh.receiveShadow = true;
-    group.add(pbMesh);
+    // Muro frontal bajo de parcela con valla de barrotes negros (render de calle)
+    const wallFront = new THREE.Mesh(new THREE.BoxGeometry(W + 3.5, 1.2, 0.2), matCelosiaNegra);
+    wallFront.position.set(0, 0.7, (D_depth / 2) + 1.6);
+    wallFront.castShadow = true;
+    group.add(wallFront);
 
-    // Ventanal principal salón Planta Baja
-    const winGeo = new THREE.BoxGeometry(unit.ancho * 0.45, 2.2, 0.2);
-    const winMesh = new THREE.Mesh(winGeo, matVidrio);
-    winMesh.position.set(0, 1.5 + 0.2, (unit.fondo / 2) + 0.05);
-    group.add(winMesh);
+    // 2. Módulo de Vivienda: Cuerpo principal (Planta Baja + Planta Primera)
+    const houseW = W * 0.62;
+    const houseGeo = new THREE.BoxGeometry(houseW, 6.3, D_depth);
+    const houseMesh = new THREE.Mesh(houseGeo, matLadrillo);
+    houseMesh.position.set(-(W - houseW) / 2, 3.25, 0);
+    houseMesh.castShadow = true;
+    houseMesh.receiveShadow = true;
+    group.add(houseMesh);
 
-    // 3. Planta Primera (con volúmenes y celosías)
-    const ppAncho = unit.ancho * 0.82;
-    const ppFondo = unit.fondo * 0.76;
-    const ppGeo = new THREE.BoxGeometry(ppAncho, 2.9, ppFondo);
-    const ppMesh = new THREE.Mesh(ppGeo, unit.tipologia.includes('Olivo') ? matMadera : matFachada);
-    ppMesh.position.set(0, 3.2 + 1.45 + 0.2, 0.4);
-    ppMesh.castShadow = true;
-    ppMesh.receiveShadow = true;
-    group.add(ppMesh);
+    // Aplacado porcelánico antracita que enmarca los ventanales
+    const panelGeo = new THREE.BoxGeometry(houseW * 0.85, 2.2, 0.15);
+    const panelMesh = new THREE.Mesh(panelGeo, matAntracita);
+    panelMesh.position.set(-(W - houseW) / 2, 4.4, (D_depth / 2) + 0.08);
+    panelMesh.castShadow = true;
+    group.add(panelMesh);
 
-    // Ventanal Planta Alta
-    const win2Geo = new THREE.BoxGeometry(ppAncho * 0.4, 1.8, 0.2);
-    const win2Mesh = new THREE.Mesh(win2Geo, matVidrio);
-    win2Mesh.position.set(0, 3.2 + 1.5 + 0.2, (ppFondo / 2) + 0.45);
-    group.add(win2Mesh);
+    // Ventanal Planta Primera
+    const win1Geo = new THREE.BoxGeometry(houseW * 0.65, 1.6, 0.2);
+    const win1Mesh = new THREE.Mesh(win1Geo, matVidrioOscuro);
+    win1Mesh.position.set(-(W - houseW) / 2, 4.4, (D_depth / 2) + 0.15);
+    group.add(win1Mesh);
 
-    // 4. Cubierta con peto y grava/teja
-    const roofGeo = new THREE.BoxGeometry(ppAncho + 0.3, 0.35, ppFondo + 0.3);
-    const roofMesh = new THREE.Mesh(roofGeo, matCubierta);
-    roofMesh.position.set(0, 3.2 + 2.9 + 0.17 + 0.2, 0.4);
-    roofMesh.castShadow = true;
-    group.add(roofMesh);
+    // Ventanal Planta Baja salón
+    const win0Geo = new THREE.BoxGeometry(houseW * 0.6, 2.1, 0.2);
+    const win0Mesh = new THREE.Mesh(win0Geo, matVidrioOscuro);
+    win0Mesh.position.set(-(W - houseW) / 2, 1.5, (D_depth / 2) + 0.08);
+    group.add(win0Mesh);
 
-    // 5. Placas solares fotovoltaicas en cubierta (autoconsumo real)
-    const solarGeo = new THREE.BoxGeometry(ppAncho * 0.65, 0.1, ppFondo * 0.4);
-    const solarMesh = new THREE.Mesh(solarGeo, matSolar);
-    solarMesh.position.set(0, 3.2 + 2.9 + 0.4 + 0.2, 0.4);
-    solarMesh.rotation.x = THREE.MathUtils.degToRad(-10); // Inclinación hacia el sur
-    solarMesh.castShadow = true;
-    group.add(solarMesh);
+    // 3. Garaje Cubierto y Porche de Entrada en Planta Baja
+    const garageW = W * 0.38;
+    const garageGeo = new THREE.BoxGeometry(garageW, 3.1, D_depth * 0.85);
+    const garageMesh = new THREE.Mesh(garageGeo, matLadrillo);
+    garageMesh.position.set((W - garageW) / 2, 1.65, (D_depth * 0.075));
+    garageMesh.castShadow = true;
+    garageMesh.receiveShadow = true;
+    group.add(garageMesh);
+
+    // Hueco abierto de garaje (como en el render de calle con el coche aparcado)
+    const openGarageGeo = new THREE.BoxGeometry(garageW * 0.85, 2.5, 3.2);
+    const openGarageMat = new THREE.MeshStandardMaterial({ color: 0x161819, roughness: 0.9 });
+    const openGarage = new THREE.Mesh(openGarageGeo, openGarageMat);
+    openGarage.position.set((W - garageW) / 2, 1.45, (D_depth / 2) - 0.8);
+    group.add(openGarage);
+
+    // Coche estilizado aparcado dentro del garaje
+    const carGeo = new THREE.BoxGeometry(1.9, 1.1, 3.8);
+    const carMesh = new THREE.Mesh(carGeo, matCoche);
+    carMesh.position.set((W - garageW) / 2, 0.8, (D_depth / 2) - 0.8);
+    carMesh.castShadow = true;
+    group.add(carMesh);
+
+    // 4. Terraza Solárium sobre el garaje con barandilla de cristal y celosía
+    const terraceFloor = new THREE.Mesh(new THREE.BoxGeometry(garageW, 0.15, D_depth * 0.85), matAntracita);
+    terraceFloor.position.set((W - garageW) / 2, 3.22, (D_depth * 0.075));
+    group.add(terraceFloor);
+
+    // Barandilla de vidrio en la terraza
+    const glassRailing = new THREE.Mesh(new THREE.BoxGeometry(garageW * 0.95, 0.9, 0.08), matBarandillaVidrio);
+    glassRailing.position.set((W - garageW) / 2, 3.7, (D_depth / 2) - 0.7);
+    group.add(glassRailing);
+
+    // 5. Cubierta plana con peto y baterías de paneles solares fotovoltaicos inclinados
+    const roofPeto = new THREE.Mesh(new THREE.BoxGeometry(houseW + 0.3, 0.4, D_depth + 0.3), matLadrillo);
+    roofPeto.position.set(-(W - houseW) / 2, 6.4, 0);
+    roofPeto.castShadow = true;
+    group.add(roofPeto);
+
+    // Dos filas de paneles solares inclinados (igual que en los renders)
+    for (let s = -1; s <= 1; s += 2) {
+      const solarPanel = new THREE.Mesh(new THREE.BoxGeometry(houseW * 0.75, 0.08, 1.6), matSolar);
+      solarPanel.position.set(-(W - houseW) / 2, 6.7, s * 2.2);
+      solarPanel.rotation.x = THREE.MathUtils.degToRad(-18); // Inclinación solar técnica hacia el sur
+      solarPanel.castShadow = true;
+      group.add(solarPanel);
+    }
+
+    // Pérgola de lamas negras en fachada posterior (hacia el jardín privado)
+    const pergolaBeam = new THREE.Mesh(new THREE.BoxGeometry(houseW, 0.2, 2.5), matCelosiaNegra);
+    pergolaBeam.position.set(-(W - houseW) / 2, 3.2, -(D_depth / 2) - 1.25);
+    pergolaBeam.castShadow = true;
+    group.add(pergolaBeam);
 
     scene.add(group);
     unitMeshes.push(group);
@@ -482,7 +607,6 @@ function selectUnit(unit) {
     renderUnitDetail(unit);
   }
 
-  // Desplazamiento suave de la cámara a la parcela seleccionada
   const targetPos = new THREE.Vector3(unit.x, 0, -unit.y);
   controls.target.lerp(targetPos, 0.6);
 }
@@ -492,7 +616,6 @@ function renderUnitDetail(unit) {
   const formattedPrice = new Intl.NumberFormat('es-ES', { style: 'currency', currency: 'EUR', maximumFractionDigits: 0 }).format(unit.precio);
   const hipoteca = Math.round((unit.precio * 0.8) * 0.0041);
 
-  // Elegir plano correspondiente si es vivienda 1, 2 o 5, o tipología Olivo
   let planImg = 'plano_vivienda_1.png';
   if (unit.numero === 2) planImg = 'plano_vivienda_2.png';
   if (unit.numero === 5) planImg = 'plano_vivienda_5.png';
@@ -527,22 +650,22 @@ function renderUnitDetail(unit) {
       </div>
 
       <div class="model-info">
-        <h4>${unit.tipologia} · 2 Plantas Independientes</h4>
-        <p>Distribución en planta baja (salón-cocina integrado, despacho, porche y garaje) y planta alta (3 dormitorios, 2 baños y terraza solárium).</p>
-        <div style="margin-top:8px;font-size:11px;color:var(--ink-3)">Orientación: <b>${unit.orientacion}</b> · Climatización por <b>Aerotermia y Suelo Radiante</b></div>
+        <h4>${unit.tipologia} · Chalet Unifamiliar</h4>
+        <p>Fachada de ladrillo blanco esmaltado, aplacados antracita, garaje integrado, porche apergolado, terraza solárium y autoconsumo con placas solares y aerotermia.</p>
+        <div style="margin-top:8px;font-size:11px;color:var(--ink-3)">Orientación: <b>${unit.orientacion}</b></div>
       </div>
 
-      <!-- Plano Comercial -->
+      <!-- Plano de Arquitectura -->
       <div>
         <div style="font-weight:600;font-size:12px;margin-bottom:6px;display:flex;justify-content:space-between">
-          <span>Plano de Distribución</span>
-          <span style="font-size:11px;color:var(--pine);cursor:pointer" onclick="openModal('${planImg}')">🔍 Ampliar plano</span>
+          <span>Plano de Distribución Interior</span>
+          <span style="font-size:11px;color:var(--pine);cursor:pointer" onclick="openModal('${planImg}')">🔍 Ampliar</span>
         </div>
         <div class="plan-preview" onclick="openModal('${planImg}')">
           <img src="${planImg}" alt="Plano comercial de ${unit.nombre}">
           <div class="plan-caption">
             <span>Planta Baja + Planta Alta</span>
-            <span>Hacer clic para ampliar</span>
+            <span>Clic para pantalla completa</span>
           </div>
         </div>
       </div>
@@ -558,7 +681,7 @@ function renderUnitDetail(unit) {
 
       <div class="action-cta">
         <a href="https://www.mirapinos.com" target="_blank" class="btn-primary">Solicitar Información o Visita</a>
-        <button class="btn-secondary" onclick="openModal('${planImg}')">📄 Ver Ficha Completa y Superficies</button>
+        <button class="btn-secondary" onclick="openModal('${planImg}')">📄 Descargar Ficha de Distribución</button>
       </div>
     </div>
   `;
@@ -568,19 +691,35 @@ function renderGalleryTab() {
   const container = document.getElementById('panel-body');
   container.innerHTML = `
     <div style="padding:20px;display:flex;flex-direction:column;gap:16px">
-      <div>
-        <h3 style="margin:0 0 4px;font-family:var(--display)">Render Aéreo de la Urbanización</h3>
-        <p style="font-size:12px;color:var(--ink-2);margin:0 0 10px">Perspectiva general con la piscina comunitaria, pista deportiva y chalets.</p>
-        <div class="plan-preview" onclick="openModal('render1.jpg')">
-          <img src="render1.jpg" alt="Render Aéreo Finca Mirapinos">
+      <div class="render-card">
+        <img src="render_calle1.jpg" alt="Render Calle Principal Mirapinos" onclick="openModal('render_calle1.jpg')">
+        <div class="render-card-body">
+          <h4>Viales y Fachadas Principales</h4>
+          <p>Ladrillo blanco esmaltado, aplacados antracita, garajes cubiertos y solárium superior.</p>
         </div>
       </div>
 
-      <div>
-        <h3 style="margin:0 0 4px;font-family:var(--display)">Plano General de Parcelas</h3>
-        <p style="font-size:12px;color:var(--ink-2);margin:0 0 10px">Distribución del Sector 10 con las fases de venta.</p>
-        <div class="plan-preview" onclick="openModal('plano_general.png')">
-          <img src="plano_general.png" alt="Plano General Sector 10">
+      <div class="render-card">
+        <img src="render_piscina.jpg" alt="Render Piscina Comunitaria" onclick="openModal('render_piscina.jpg')">
+        <div class="render-card-body">
+          <h4>Jardín Comunitario y Piscina</h4>
+          <p>Pradera verde de recreo, solárium, piscina comunitaria y vistas despejadas al pinar.</p>
+        </div>
+      </div>
+
+      <div class="render-card">
+        <img src="render_calle2.jpg" alt="Perspectiva de viales" onclick="openModal('render_calle2.jpg')">
+        <div class="render-card-body">
+          <h4>Paseos y Viales de Baja Velocidad</h4>
+          <p>Conexión directa con zonas verdes peatonales y áreas de juegos infantiles.</p>
+        </div>
+      </div>
+
+      <div class="render-card">
+        <img src="render1.jpg" alt="Render Aéreo General" onclick="openModal('render1.jpg')">
+        <div class="render-card-body">
+          <h4>Vista Aérea General del Conjunto</h4>
+          <p>Las 35 viviendas unifamiliares con su ordenación y equipamientos.</p>
         </div>
       </div>
     </div>
@@ -591,36 +730,39 @@ function renderUrbanizacionTab() {
   const container = document.getElementById('panel-body');
   container.innerHTML = `
     <div style="padding:20px;display:flex;flex-direction:column;gap:14px">
-      <h3 style="margin:0;font-family:var(--display)">Zonas Comunes y Entorno</h3>
+      <h3 style="margin:0;font-family:var(--display)">Equipamientos y Calidades</h3>
       <p style="font-size:12.5px;color:var(--ink-2);line-height:1.5">
-        Finca Mirapinos se ubica en el Camino Viejo de Simancas, integrado en plena naturaleza junto al Pinar de Antequera y Simancas.
+        Urbanización residencial cerrada en Simancas con piscina comunitaria, pista deportiva y amplias zonas verdes privadas y comunitarias.
       </p>
 
       <div class="specs-grid">
         <div class="spec-box">
           <div class="spec-label">Piscina Comunitaria</div>
-          <div class="spec-val">Lámina de agua + Solárium</div>
+          <div class="spec-val">Con solárium cerrado</div>
         </div>
         <div class="spec-box">
-          <div class="spec-label">Zonas Deportivas</div>
-          <div class="spec-val">Pista multideporte</div>
+          <div class="spec-label">Pista Deportiva</div>
+          <div class="spec-val">Multideporte y juegos</div>
         </div>
         <div class="spec-box">
-          <div class="spec-label">Zonas Verdes</div>
-          <div class="spec-val">Pradera ajardinada</div>
+          <div class="spec-label">Arquitectura</div>
+          <div class="spec-val">Ladrillo blanco + Antracita</div>
         </div>
         <div class="spec-box">
-          <div class="spec-label">Eficiencia Energética</div>
-          <div class="spec-val">Aerotermia + Solar</div>
+          <div class="spec-label">Sostenibilidad</div>
+          <div class="spec-val">Aerotermia + Fotovoltaica</div>
         </div>
       </div>
 
-      <div class="model-info">
-        <h4>Conexiones y Servicios</h4>
-        <p>A solo 5 minutos de la ronda exterior VA-30 y a 15-20 minutos del centro de Valladolid, con parada de autobús urbano y acceso directo a zonas recreativas.</p>
+      <div class="plan-preview" onclick="openModal('plano_general.png')">
+        <img src="plano_general.png" alt="Plano Sector 10 Mirapinos">
+        <div class="plan-caption">
+          <span>Plano Parcelario General Sector 10</span>
+          <span>Clic para ampliar</span>
+        </div>
       </div>
 
-      <button class="btn-primary" onclick="setAerialCamera()">📸 Ver Vista Aérea Completa</button>
+      <button class="btn-primary" onclick="setStreetCamera()">🚗 Ver a Pie de Calle</button>
     </div>
   `;
 }
@@ -636,9 +778,14 @@ function closeModal() {
   document.getElementById('modal-zoom').classList.remove('open');
 }
 
-function setAerialCamera() {
-  controls.target.set(8, 0, -2);
-  camera.position.set(15, 125, 165);
+function setStreetCamera() {
+  controls.target.set(-15, 3, 20);
+  camera.position.set(-35, 8, 55);
+}
+
+function setPoolCamera() {
+  controls.target.set(12, 1, -5);
+  camera.position.set(10, 16, 32);
 }
 
 function setupEvents() {
@@ -692,12 +839,13 @@ function setupEvents() {
 
   document.getElementById('btn-reset-cam').onclick = () => {
     controls.target.set(5, 0, 5);
-    camera.position.set(0, 110, 150);
+    camera.position.set(20, 130, 170);
   };
 
-  document.getElementById('btn-camera-aerial').onclick = setAerialCamera;
+  document.getElementById('btn-camera-street').onclick = setStreetCamera;
+  document.getElementById('btn-camera-pool').onclick = setPoolCamera;
 
-  // Raycaster para clic en 3D
+  // Raycaster para clic 3D
   const raycaster = new THREE.Raycaster();
   const mouse = new THREE.Vector2();
   const canvas = document.getElementById('gl');
@@ -720,7 +868,6 @@ function setupEvents() {
     }
   });
 
-  // Cerrar modal con tecla Escape
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') closeModal();
   });
@@ -736,7 +883,7 @@ function projectTags() {
     const tag = document.getElementById(`tag-${unit.id}`);
     if (!tag || tag.style.display === 'none') return;
 
-    tempV.set(unit.x, 7.8, -unit.y);
+    tempV.set(unit.x, 8.2, -unit.y);
     tempV.project(camera);
 
     if (tempV.z > 1) {
