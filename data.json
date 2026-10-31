@@ -392,10 +392,10 @@
       "dormitorios": 4,
       "banos": 3,
       "plantas": 2,
-      "orientacion": "Sur / Sureste",
-      "x": -27.33,
-      "y": 23.79,
-      "rot": 205.0,
+      "orientacion": "Sureste / Piscina",
+      "x": -24.5,
+      "y": 15.0,
+      "rot": 119.0,
       "ancho": 12.0,
       "fondo": 11.0,
       "altura": 6.8
@@ -413,10 +413,10 @@
       "dormitorios": 4,
       "banos": 3,
       "plantas": 2,
-      "orientacion": "Sur / Sureste",
-      "x": -22.67,
-      "y": 15.06,
-      "rot": 205.0,
+      "orientacion": "Sureste / Piscina",
+      "x": -30.0,
+      "y": 5.0,
+      "rot": 119.0,
       "ancho": 12.0,
       "fondo": 11.0,
       "altura": 6.8
@@ -581,10 +581,10 @@
       "dormitorios": 4,
       "banos": 3,
       "plantas": 2,
-      "orientacion": "Sur / Sureste",
-      "x": -8.02,
-      "y": -19.72,
-      "rot": 12.0,
+      "orientacion": "Sur / Piscina",
+      "x": -13.63,
+      "y": -21.5,
+      "rot": 102.3,
       "ancho": 12.0,
       "fondo": 11.0,
       "altura": 6.8
@@ -602,10 +602,10 @@
       "dormitorios": 4,
       "banos": 3,
       "plantas": 2,
-      "orientacion": "Sur / Sureste",
-      "x": -6.0,
-      "y": -29.62,
-      "rot": 12.0,
+      "orientacion": "Sur / Piscina",
+      "x": -11.17,
+      "y": -32.73,
+      "rot": 102.3,
       "ancho": 12.0,
       "fondo": 11.0,
       "altura": 6.8
@@ -9078,5 +9078,24 @@
       ],
       "closed": true
     }
-  ]
+  ],
+  "amenities": {
+    "piscina": {
+      "x": 12.0,
+      "y": 5.0,
+      "ancho": 18.0,
+      "largo": 8.0,
+      "profundidad": 1.6,
+      "solarium_ancho": 28.0,
+      "solarium_largo": 18.0,
+      "rot": 25.0
+    },
+    "pista_deportiva": {
+      "x": 48.0,
+      "y": 25.0,
+      "ancho": 22.0,
+      "largo": 12.0,
+      "rot": 35.0
+    }
+  }
 }
